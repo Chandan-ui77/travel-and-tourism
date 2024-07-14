@@ -1,19 +1,20 @@
-/* styles.css */
-
+/* Basic styling for the webpage */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: url('images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
 }
 
 header .logo {
@@ -23,12 +24,13 @@ header .logo {
 
 header nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 20px;
 }
 
 header nav ul li {
-    display: inline;
+    margin-left: 20px;
 }
 
 header nav ul li a {
@@ -37,31 +39,24 @@ header nav ul li a {
 }
 
 .hero {
-    background: url('travel.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: url('hero.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
+    padding: 100px 20px;
 }
 
-.hero-content {
-    max-width: 600px;
-}
-
-.hero h1 {
+.hero-content h1 {
     font-size: 48px;
     margin: 0;
 }
 
-.hero p {
+.hero-content p {
     font-size: 24px;
-    margin: 10px 0 20px;
+    margin: 20px 0;
 }
 
 .cta-btn {
-    background-color: #ff6347;
+    background-color: #ff6200;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -69,75 +64,98 @@ header nav ul li a {
 }
 
 .features, .destinations, .testimonials, .contact {
-    padding: 60px 20px;
+    padding: 50px 20px;
     text-align: center;
-}
-
-.features h2, .destinations h2, .testimonials h2, .contact h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
 }
 
 .feature-cards, .destination-cards, .testimonial-cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .feature-card, .destination-card, .testimonial-card {
-    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     padding: 20px;
-    border-radius: 5px;
+    margin: 10px;
     width: 30%;
-}
-
-.feature-card h3, .destination-card h3, .testimonial-card h4 {
-    margin: 10px 0;
-}
-
-.destination-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact form label {
+    display: block;
+    margin: 10px 0 5px;
 }
 
 .contact form input, .contact form textarea {
-    width: 80%;
+    width: 100%;
     padding: 10px;
-    border-radius: 5px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-}
-
-.contact form button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 4px;
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 }
 
-footer .footer-content {
-    margin-bottom: 10px;
-}
-
-footer a {
+footer .footer-content a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
+}
+
+/* Add some basic styling for the to-do list */
+.todo-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.todo-container h2 {
+    margin-bottom: 20px;
+}
+
+.todo-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.todo-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-container ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-container ul li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.todo-container ul li button {
+    margin-left: 10px;
 }
